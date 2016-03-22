@@ -1,3 +1,27 @@
 <%= link_to image_tag('batman_photo', class: 'super_photo'), pages_batman_path %>
 
+<div>
+<% if notice %>
+	<%= notice %>
+<% elsif alert %>
+	<%= alert %>
+<% end %>
+</div>
+
+<%= form_tag pages_save_superheroe_path, method: "post" do %>
+
+	<div>
+		<%= select_tag(:heroe, options_for_select([["Escoja superheroe:", nil],["Batman", "batman"], ["Superman", "superman"]])) %>
+	</div>
+
+	<div>
+		<%= label_tag :email, "Tu email:" %>
+		<%= text_field_tag :email, params[:email] %>
+	</div>
+
+	<div>
+		<%= submit_tag "Enviar"%>
+	</div>
+<% end %>
+
 <%= link_to image_tag('superman_photo', class: 'super_photo'), pages_superman_path %>
