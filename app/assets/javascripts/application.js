@@ -16,3 +16,4 @@
 //= require_tree .
 //= stub basic_usage_for_batman
 //= stub basic_usage_for_superman
+//= stub segundos
